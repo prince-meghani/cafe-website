@@ -41,9 +41,9 @@ export default function FinalCTA() {
             <p className="cta-text text-gray-900 font-medium text-sm sm:text-base md:text-lg mb-6 sm:mb-8 max-w-md mx-auto lg:mx-0">
               Don't Just Dream About It Taste The Difference Today
             </p>
-            <button className="cta-text bg-royal-blue text-white px-8 py-3.5 sm:py-4 rounded-full font-medium hover:bg-royal-blue/90 transition-all hover:scale-105 active:scale-95 w-full sm:w-auto min-h-[44px]">
+            <a href="#outlet" className="cta-text inline-flex items-center justify-center bg-royal-blue text-white px-8 py-3.5 sm:py-4 rounded-full font-bold hover:bg-royal-blue/90 transition-all hover:scale-105 active:scale-95 w-full sm:w-auto min-h-[44px] shadow-lg shadow-royal-blue/20">
               Visit Our Cafe
-            </button>
+            </a>
           </div>
 
           {/* Right — Coffee Cup */}

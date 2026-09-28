@@ -72,12 +72,12 @@ export default function Hero() {
             Freshly brewed coffee, handcrafted pastries, and a space designed for conversations, creativity, and unforgettable mornings.
           </p>
           <div className="flex flex-col sm:flex-row gap-3.5 sm:gap-4 justify-center lg:justify-start">
-            <button className="hero-btn bg-royal-blue text-white px-7 sm:px-8 py-3.5 sm:py-4 rounded-full font-semibold hover:bg-royal-blue/90 transition-all hover:scale-105 active:scale-95 shadow-lg shadow-royal-blue/30 touch-manipulation text-sm sm:text-base min-h-[44px]">
+            <a href="#menu" className="hero-btn inline-flex items-center justify-center bg-royal-blue text-white px-7 sm:px-8 py-3.5 sm:py-4 rounded-full font-semibold hover:bg-royal-blue/90 transition-all hover:scale-105 active:scale-95 shadow-lg shadow-royal-blue/30 touch-manipulation text-sm sm:text-base min-h-[44px]">
               Explore Menu
-            </button>
-            <button className="hero-btn bg-white text-royal-blue px-7 sm:px-8 py-3.5 sm:py-4 rounded-full font-semibold hover:bg-cream transition-all hover:scale-105 active:scale-95 shadow-md touch-manipulation text-sm sm:text-base min-h-[44px]">
+            </a>
+            <a href="#outlet" className="hero-btn inline-flex items-center justify-center bg-white text-royal-blue px-7 sm:px-8 py-3.5 sm:py-4 rounded-full font-semibold hover:bg-cream transition-all hover:scale-105 active:scale-95 shadow-md touch-manipulation text-sm sm:text-base min-h-[44px]">
               Reserve a Table
-            </button>
+            </a>
           </div>
           
           {/* Social Proof */}

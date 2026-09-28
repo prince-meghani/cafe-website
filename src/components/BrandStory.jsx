@@ -5,25 +5,25 @@ const storyPanels = [
   {
     title: "It Started With Curiosity",
     text: "In 2018, our founder wandered through the misty highlands of Java, searching for the perfect bean. What they found was more than coffee — it was a community, a tradition, a way of life passed down through generations of farmers.",
-    img: "https://images.unsplash.com/photo-1518832553480-cd0e625ed3e6?q=80&w=1000&auto=format&fit=crop",
+    img: "https://images.unsplash.com/photo-1511537190424-bbbab87ac5eb?q=80&w=1200&auto=format&fit=crop",
     alt: "Misty highlands coffee plantation"
   },
   {
     title: "From Farm to Cup",
     text: "Every bean tells a story. We source directly from family farms across Indonesia, ensuring fair wages and sustainable practices. The journey from cherry to cup is one of patience, precision, and deep respect for the craft.",
-    img: "https://images.unsplash.com/photo-1611854779393-1b2da9d400fe?q=80&w=1000&auto=format&fit=crop",
+    img: "https://images.unsplash.com/photo-1611854779393-1b2da9d400fe?q=80&w=1200&auto=format&fit=crop",
     alt: "Farmer holding freshly harvested coffee cherries"
   },
   {
     title: "The Art of Roasting",
     text: "Our master roasters spend 12 hours daily perfecting each batch. Small-batch roasting ensures every cup carries the distinct terroir of its origin — notes of dark chocolate, citrus, and caramel dancing on your palate.",
-    img: "https://images.unsplash.com/photo-1518057111178-44a106bad636?q=80&w=1000&auto=format&fit=crop",
+    img: "https://images.unsplash.com/photo-1518057111178-44a106bad636?q=80&w=1200&auto=format&fit=crop",
     alt: "Small-batch coffee roasting in cooling tray"
   },
   {
     title: "A Space for Everyone",
     text: "Ruangrasa isn't just a cafe — it's a sanctuary. A place where strangers become friends over lattes, where artists find their muse, where every morning begins with warmth, purpose, and the perfect brew.",
-    img: "https://images.unsplash.com/photo-1554118811-1e0d58224f24?q=80&w=1000&auto=format&fit=crop",
+    img: "https://images.unsplash.com/photo-1554118811-1e0d58224f24?q=80&w=1200&auto=format&fit=crop",
     alt: "Sunlit cozy cafe interior and community space"
   }
 ];

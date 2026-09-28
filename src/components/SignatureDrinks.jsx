@@ -172,9 +172,9 @@ export default function SignatureDrinks() {
 
               <div className="flex items-center justify-between">
                 <span className="text-2xl font-display font-bold">{drink.price}</span>
-                <button className="bg-white text-royal-blue px-5 py-2 rounded-full text-sm font-bold hover:scale-105 active:scale-95 transition-transform">
+                <a href="#outlet" className="inline-flex items-center justify-center bg-white text-royal-blue px-6 py-2.5 rounded-full text-sm font-bold hover:scale-105 active:scale-95 transition-transform shadow-md min-h-[44px]">
                   Order Now
-                </button>
+                </a>
               </div>
             </div>
           ))}
