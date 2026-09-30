@@ -65,22 +65,35 @@ export default function LocationSection() {
           
           {/* Interactive Pins */}
           <div className="absolute top-1/3 left-1/4 z-20 group">
-            <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center text-royal-blue shadow-xl cursor-pointer transform group-hover:scale-110 transition-transform">
+            <button
+              type="button"
+              aria-label="View West Jakarta Outlet Details"
+              className="w-12 h-12 bg-white rounded-full flex items-center justify-center text-royal-blue shadow-xl cursor-pointer transform group-hover:scale-110 transition-transform"
+            >
               <MapPin size={24} fill="currentColor" />
-            </div>
+            </button>
             <div className="absolute top-full mt-4 left-1/2 -translate-x-1/2 w-64 bg-white text-royal-blue p-4 rounded-xl shadow-2xl opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none group-hover:pointer-events-auto">
               <h4 className="font-bold mb-1">Kabon Jeruk Square</h4>
               <p className="text-xs text-royal-blue/70 mb-3 flex items-center gap-1"><Clock size={12}/> 08:00 - 22:00</p>
-              <button className="w-full bg-royal-blue text-white py-2 rounded-lg text-sm font-medium flex items-center justify-center gap-2 hover:bg-royal-blue/90">
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=Jakarta"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full bg-royal-blue text-white py-2 rounded-lg text-sm font-medium flex items-center justify-center gap-2 hover:bg-royal-blue/90 transition-colors"
+              >
                 <Navigation size={16} /> Get Directions
-              </button>
+              </a>
             </div>
           </div>
           
           <div className="absolute bottom-1/3 right-1/3 z-20 group">
-             <div className="w-10 h-10 bg-white/80 rounded-full flex items-center justify-center text-royal-blue shadow-lg cursor-pointer transform group-hover:scale-110 transition-transform">
+             <button
+               type="button"
+               aria-label="View South Jakarta Outlet Pin"
+               className="w-10 h-10 bg-white/80 rounded-full flex items-center justify-center text-royal-blue shadow-lg cursor-pointer transform group-hover:scale-110 transition-transform"
+             >
               <MapPin size={20} />
-            </div>
+            </button>
           </div>
         </div>
       </div>

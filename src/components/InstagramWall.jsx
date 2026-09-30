@@ -6,14 +6,14 @@ import { Flip } from 'gsap/Flip';
 gsap.registerPlugin(ScrollTrigger, Flip);
 
 const photos = [
-  'https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?q=80&w=800&auto=format&fit=crop',
-  'https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=800&auto=format&fit=crop',
-  'https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?q=80&w=800&auto=format&fit=crop',
-  'https://images.unsplash.com/photo-1521017432531-fbd92d768814?q=80&w=800&auto=format&fit=crop',
-  'https://images.unsplash.com/photo-1554118811-1e0d58224f24?q=80&w=800&auto=format&fit=crop',
-  'https://images.unsplash.com/photo-1509440159596-0249088772ff?q=80&w=800&auto=format&fit=crop',
-  'https://images.unsplash.com/photo-1525351484163-7529414344d8?q=80&w=800&auto=format&fit=crop',
-  'https://images.unsplash.com/photo-1517256064527-09c73fc73e38?q=80&w=800&auto=format&fit=crop'
+  'https://images.unsplash.com/photo-1509785307050-d4066910ec1e?q=80&w=800&auto=format&fit=crop', // Minimalist ceramic latte
+  'https://images.unsplash.com/photo-1554118811-1e0d58224f24?q=80&w=800&auto=format&fit=crop', // Sunlit aesthetic cafe interior
+  'https://images.unsplash.com/photo-1555507036-ab1f4038808a?q=80&w=800&auto=format&fit=crop', // Golden croissant on ceramic plate
+  'https://images.unsplash.com/photo-1517701604599-bb29b565090c?q=80&w=800&auto=format&fit=crop', // Aesthetic iced latte
+  'https://images.unsplash.com/photo-1511920170033-f8396924c348?q=80&w=800&auto=format&fit=crop', // Warm morning coffee & light shadows
+  'https://images.unsplash.com/photo-1517256064527-09c73fc73e38?q=80&w=800&auto=format&fit=crop', // Minimalist pour-over coffee craft
+  'https://images.unsplash.com/photo-1498804103079-a6351b050096?q=80&w=800&auto=format&fit=crop', // Aesthetic cafe journal & espresso
+  'https://images.unsplash.com/photo-1507133750040-4a8f57021571?q=80&w=800&auto=format&fit=crop'  // Warm cappuccino on wood table
 ];
 
 export default function InstagramWall() {
@@ -82,8 +82,16 @@ export default function InstagramWall() {
       <div ref={containerRef} className="gallery-wrap bg-cream">
         <div ref={galleryRef} className="gallery gallery--bento gallery--switch" id="gallery-8">
           {photos.map((src, index) => (
-            <div key={index} className="gallery__item">
-              <img src={src} alt={`Instagram moment ${index + 1}`} loading="lazy" />
+            <div key={index} className="gallery__item overflow-hidden">
+              <img
+                src={src}
+                alt={`Instagram moment ${index + 1}`}
+                loading="lazy"
+                onError={(e) => {
+                  e.currentTarget.onerror = null;
+                  e.currentTarget.src = 'https://images.unsplash.com/photo-1509785307050-d4066910ec1e?q=80&w=800&auto=format&fit=crop';
+                }}
+              />
             </div>
           ))}
         </div>

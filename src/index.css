@@ -15,19 +15,6 @@
   body {
     @apply bg-cream text-royal-blue font-sans antialiased;
     overflow-x: hidden;
-    cursor: none;
-  }
-
-  body * {
-    cursor: none;
-  }
-
-  @media (max-width: 768px) {
-
-    body,
-    body * {
-      cursor: auto;
-    }
   }
 
   h1,
@@ -39,9 +26,25 @@
     @apply font-display tracking-tight;
   }
 
+  :focus-visible {
+    outline: 2px solid var(--color-royal-blue);
+    outline-offset: 2px;
+  }
+
   ::selection {
     background-color: #1E2397;
     color: #F5F1E8;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }
 

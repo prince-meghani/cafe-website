@@ -19,9 +19,12 @@ export default function Footer() {
           {/* Contact */}
           <div>
             <h4 className="font-display font-bold text-base sm:text-lg mb-4 sm:mb-6">Contact Us Today!</h4>
-            <button className="bg-white text-royal-blue px-6 py-3 rounded-full font-medium hover:bg-cream transition-colors flex items-center gap-2.5 text-sm min-h-[44px]">
+            <a
+              href="mailto:hello@ruangrasa.com"
+              className="inline-flex items-center gap-2.5 bg-white text-royal-blue px-6 py-3 rounded-full font-bold hover:bg-cream transition-colors text-sm min-h-[44px]"
+            >
               <Mail size={16} /> Let's connect via email
-            </button>
+            </a>
           </div>
 
           {/* Explore */}
@@ -29,8 +32,9 @@ export default function Footer() {
             <h4 className="font-display font-bold text-base sm:text-lg mb-4 sm:mb-6">Explore</h4>
             <ul className="space-y-2.5 sm:space-y-3 text-white/70 text-sm">
               <li><a href="#menu" className="hover:text-white transition-colors">Discover Our Menu</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Read Our Story</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">View Job Openings</a></li>
+              <li><a href="#home" className="hover:text-white transition-colors">Read Our Story</a></li>
+              <li><a href="#outlet" className="hover:text-white transition-colors">Our Outlets</a></li>
+              <li><a href="#reservation" className="hover:text-white transition-colors">Table Reservation</a></li>
             </ul>
           </div>
 
@@ -47,10 +51,13 @@ export default function Footer() {
           {/* Stay Updated */}
           <div>
             <h4 className="font-display font-bold text-base sm:text-lg mb-4 sm:mb-6">Stay Updated</h4>
-            <ul className="space-y-2.5 sm:space-y-3 text-white/70 text-sm">
-              <li><a href="#" className="hover:text-white transition-colors">Join Our Newsletter</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Get Exclusive Offers</a></li>
-            </ul>
+            <p className="text-white/70 text-sm mb-3">Join our community for seasonal tastings & private roastery events.</p>
+            <a
+              href="#reservation"
+              className="text-sm font-bold text-white underline underline-offset-4 hover:text-white/80 transition-colors"
+            >
+              Reserve an experience &rarr;
+            </a>
           </div>
         </div>
 
@@ -61,8 +68,8 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 pt-6 border-t border-white/10 text-white/50 text-xs sm:text-sm">
-          <p>&copy; {new Date().getFullYear()} Copyright All Right Reserved</p>
-          <a href="#" className="hover:text-white transition-colors">Terms & Conditions</a>
+          <p>&copy; {new Date().getFullYear()} Ruangrasa Coffee Roasters. All Rights Reserved.</p>
+          <span className="text-white/60">Crafted with passion in Jakarta</span>
         </div>
       </div>
     </footer>

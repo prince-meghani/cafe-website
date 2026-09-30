@@ -21,7 +21,7 @@ const drinks = [
     tagline: 'Dark & indulgent',
     desc: 'Belgian dark chocolate meets our darkest roast in this velvety, intensely satisfying mocha. Topped with cocoa dust and a hint of sea salt.',
     price: 'Rp. 35,000',
-    img: 'https://images.unsplash.com/photo-1572442388796-11668ba67e53?q=80&w=800&auto=format&fit=crop',
+    img: 'https://images.unsplash.com/photo-1578314675249-a6910f80cc4e?q=80&w=800&auto=format&fit=crop',
     rating: 4.8,
     reviews: 278,
     calories: '220 kcal',
@@ -120,6 +120,10 @@ export default function SignatureDrinks() {
                 <img
                   src={drink.img}
                   alt={drink.name}
+                  onError={(e) => {
+                    e.currentTarget.onerror = null;
+                    e.currentTarget.src = 'https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=800&auto=format&fit=crop';
+                  }}
                   className="w-full h-full object-cover transform group-hover:scale-110 group-hover:rotate-2 transition-all duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-royal-blue/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>

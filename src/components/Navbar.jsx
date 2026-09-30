@@ -56,8 +56,7 @@ export default function Navbar() {
               <a 
                 key={item} 
                 href={`#${item.toLowerCase()}`} 
-                onClick={(e) => {
-                  // Optional: Smooth scroll manually if desired, but native CSS smooth scroll usually handles this
+                onClick={() => {
                   setActiveSection(item.toLowerCase());
                 }}
                 className={`relative px-6 py-2 rounded-full text-sm font-bold transition-colors duration-300 ${isActive ? 'text-white' : 'text-royal-blue hover:text-royal-blue/70 hover:bg-white/50'}`}
@@ -77,13 +76,20 @@ export default function Navbar() {
 
         {/* CTA Button */}
         <div className="hidden md:block">
-          <button className="bg-royal-blue text-white px-7 py-2.5 rounded-full font-bold text-sm hover:bg-[#2a30b5] transition-all hover:scale-105 active:scale-95 shadow-[0_10px_20px_rgba(30,35,151,0.2)]">
+          <a
+            href="#reservation"
+            className="inline-flex items-center justify-center bg-royal-blue text-white px-7 py-2.5 rounded-full font-bold text-sm hover:bg-[#2a30b5] transition-all hover:scale-105 active:scale-95 shadow-[0_10px_20px_rgba(30,35,151,0.2)]"
+          >
             Contact Us
-          </button>
+          </a>
         </div>
 
         {/* Mobile Toggle */}
-        <button className="md:hidden text-royal-blue z-[60] relative bg-white/50 p-2 rounded-full backdrop-blur-md" onClick={() => setIsOpen(!isOpen)}>
+        <button
+          aria-label={isOpen ? "Close navigation menu" : "Open navigation menu"}
+          className="md:hidden text-royal-blue z-[60] relative bg-white/50 p-2 rounded-full backdrop-blur-md"
+          onClick={() => setIsOpen(!isOpen)}
+        >
           {isOpen ? <X size={26} /> : <Menu size={26} />}
         </button>
 
@@ -114,9 +120,13 @@ export default function Navbar() {
                 );
               })}
               
-              <button className="mt-8 bg-royal-blue text-white px-10 py-4 rounded-full font-bold text-lg w-3/4 max-w-xs shadow-xl">
+              <a
+                href="#reservation"
+                onClick={() => setIsOpen(false)}
+                className="mt-8 inline-flex items-center justify-center bg-royal-blue text-white px-10 py-4 rounded-full font-bold text-lg w-3/4 max-w-xs shadow-xl text-center"
+              >
                 Contact Us
-              </button>
+              </a>
             </motion.div>
           )}
         </AnimatePresence>
